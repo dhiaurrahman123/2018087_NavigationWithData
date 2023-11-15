@@ -114,5 +114,19 @@ fun DetailInformasi(
         Text(text = contactUiState.nama)
         Divider()
         Spacer(Modifier.padding(10.dp))
+
+        Text(stringResource(id = R.string.alamat))
+        Text(text = contactUiState.alamat)
+        Divider()
+        Spacer(Modifier.padding(10.dp))
+
+        Text(stringResource(id = R.string.tlpn))
+        Text(text = contactUiState.tlpn)
+        Divider()
+        Spacer(Modifier.padding(10.dp))
+
+        Button(onClick = onBackButtonClicked){
+            Text(text= stringResource(id = R.string.Back))
+        }
     }
 }
