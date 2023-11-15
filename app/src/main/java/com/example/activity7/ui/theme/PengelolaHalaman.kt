@@ -49,13 +49,15 @@ import androidx.navigation.compose.rememberNavController
 import com.example.activity7.data.SumberData.flavors
 import java.io.StringReader
 import androidx.compose.runtime.setValue
-
+import androidx.compose.foundation.layout.padding
+import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
 
 enum class PengelolaHalaman(
     Home,
     Rasa,
-    Summary
+    Summary,
+    Formulir
 )
 
 @Composable
@@ -82,6 +84,8 @@ fun EsJumboAppBar(
         }
     )
 }
+
+
 
 @Composable
 fun EsJumboApp(
@@ -111,6 +115,13 @@ fun EsJumboApp(
             }
         )
     }
+    composable(route= PengelolaHalaman.Formulir.name)
+        FormPengisiData(
+            onSumbitButtonClicked = {
+                viewmodel.setContact(it)
+                navHostController.navigate(PengelolaHalaman.Detail.name)
+            })
+
     composable(route = PengelolaHalaman.Home.name)
     HalamanSatu(
     pilihanRasa = flavors.map{
