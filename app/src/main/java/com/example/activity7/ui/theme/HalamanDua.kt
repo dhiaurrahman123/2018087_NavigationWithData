@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.height
@@ -38,6 +39,12 @@ import com.example.activity7.data.OrderUIState
 import com.example.activity7.komponen.FormatLabelHarga
 import com.example.activity7.ui.komponen.FormatLabelHarga
 import com.example.activity7.Data2.ContactUiState
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
+import androidx.compose.material3.Divider
+import androidx.compose.material3.Text
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 
 
 @Composable
@@ -97,5 +104,15 @@ fun DetailInformasi(
     contactUiState: ContactUiState,
     onBackButtonClicked:()->Unit
 ){
-
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(10.dp),
+        verticalArrangement = Arrangement.Center
+    ){
+        Text(stringResource(id = R.string.nama))
+        Text(text = contactUiState.nama)
+        Divider()
+        Spacer(Modifier.padding(10.dp))
+    }
 }
