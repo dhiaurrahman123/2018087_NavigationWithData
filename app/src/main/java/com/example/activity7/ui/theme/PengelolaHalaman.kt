@@ -57,7 +57,8 @@ enum class PengelolaHalaman(
     Home,
     Rasa,
     Summary,
-    Formulir
+    Formulir,
+    Detail
 )
 
 @Composable
@@ -143,12 +144,15 @@ fun EsJumboApp(
     )
     composable(route = PengelolaHalaman.Summary.name){
         HalamanDua(
-            orderUiState = uiState,
-            onCancelButtonClicker = {
-                cancelOrderAndNavigateToRasa(navController)
+            contactUiState = uiState,
+            onBackButtonClicked = {
+                navHostController.popBackStack(
+                    PengelolaHalaman.Formulir.name,
+                    false
+                )
             }
         )
-    }
+
 }
 private fun cancelOrderAndNavigateToHome(
     viewModel: OrderViewModel,
