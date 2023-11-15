@@ -37,6 +37,7 @@ import com.example.activity7.R
 import com.example.activity7.data.OrderUIState
 import com.example.activity7.komponen.FormatLabelHarga
 import com.example.activity7.ui.komponen.FormatLabelHarga
+import com.example.activity7.Data2.ContactUiState
 
 
 @Composable
@@ -90,4 +91,11 @@ fun HalamanDua(
             }
         }
     }
+}
+@Composable
+fun DetailInformasi(
+    contactUiState: ContactUiState,
+    onBackButtonClicked:()->Unit
+){
+
 }
