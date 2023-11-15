@@ -48,6 +48,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.activity7.data.SumberData.flavors
 import java.io.StringReader
+import androidx.compose.runtime.setValue
+
 
 
 enum class PengelolaHalaman(
