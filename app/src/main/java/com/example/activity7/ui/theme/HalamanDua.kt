@@ -35,9 +35,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.activity7.R
-import com.example.activity7.data.OrderUIState
+import com.example.activity7.data.OrderUiState
 import com.example.activity7.komponen.FormatLabelHarga
-import com.example.activity7.ui.komponen.FormatLabelHarga
 import com.example.activity7.Data2.ContactUiState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button

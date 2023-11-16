@@ -72,7 +72,7 @@ fun EsJumboAppBar(
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer
         ),
-        modifier = modifier,
+        modifier = Modifier,
         navigationIcon = {
             if(bisaNavigasiBack){
                 IconButton(onClick = navigasiUp) {
